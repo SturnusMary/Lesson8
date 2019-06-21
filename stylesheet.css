@@ -44,7 +44,6 @@
 body {
     font-family: 'helveticaneuecyrroman';
     color: #44464f;
-    /*width: 100%;*/
 }
 .wrapper {
     max-width: 1262px;
@@ -71,14 +70,7 @@ ul {
 .header-logo {
     margin-right: 95px;
 }
-@media (max-width: 575px)  { 
-    .header-logo {
-        margin: 0 auto;
-        display: inline-block;
-        text-align: center;
-        width: 100%;
-    }
- }
+
 .header-address {
     margin-top: 25px;
     padding-left: 30px;
@@ -139,23 +131,7 @@ span {
     background: url("img/envelope.png") no-repeat left center;
     line-height: 16px;
 }
-@media (max-width: 575px)  { 
-    #header {
-        width: 100%; 
-    }
-    .header-contact {
-        float: left;
-        width: 50%;
-        margin-left: 10px;
-        font-size: 1rem;
-    }
-    .header-address {
-        width: 50%;
-        float: left;
-        margin-left: 10px;
-        font-size: 1rem;
-    }
- }
+
 .header-getprice-button {
     background: #86c043 url("img/download.png") no-repeat 35px center;
     color: white;
@@ -177,13 +153,7 @@ span {
     margin-top: 20px;
     float: right;
 }
-@media (max-width: 575px)  { 
 
-    .header-getprice {
-        float: left;
-        margin-left: 10px;
-    }
- }
 /*header*/
 
 .header-bottom .wrapper {
@@ -218,7 +188,7 @@ span {
 }
 .header-bottom-menu .current a {
     background-color: #ffd307;
-    position: relative;
+    /*position: relative;*/
     font-family: 'helveticaneuecyrmedium';
 }
 .header-bottom-menu .current a {
@@ -315,14 +285,15 @@ button {
     text-shadow: 1px 1px 0px rgba(68, 70, 79, 0.5); 
 }
 
-.flex {
+/*.flex {
     display: flex;
     justify-content: space-between;
     align-content: stretch;
-}
+}*/
 .home-news-container {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
+    float: left;
     width: 402.6px;
     height: 447px;
     box-sizing: border-box;
@@ -334,6 +305,11 @@ button {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
+}
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
 }
 .nomargin {
     margin: 0;
@@ -365,12 +341,10 @@ button {
 
 #footer {
     background-color: #689434;
-}
-.footer-wrapper {
-    box-sizing: border-box;
     padding-top: 30px;
-    padding-bottom: 22px;
+    padding-bottom: 53px;
 }
+
 /*.footer-col {
     width: 404px;
     height: 447px;
@@ -521,3 +495,65 @@ time {
     display: block;
 
 }
+@media (max-width: 575px)  { 
+    .header-logo {
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+ }
+ @media (max-width: 575px)  { 
+    #header {
+        width: 100%; 
+    }
+    .header-contact {
+        float: left;
+        width: 50%;
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+    .header-address {
+        width: 50%;
+        float: left;
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+ }
+ @media (max-width: 575px)  { 
+
+    .header-getprice {
+        float: left;
+        margin-left: 10px;
+    }
+    .home-slider {
+        display: none;
+        
+    }
+    .home-news-title {
+        font-size: 2em;
+        text-align: center;
+    }
+    .home-news-container {
+        width: 100%;
+    }
+    .home-container-item-imgage {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .header-bottom-menu li:nth-child(n+2) {
+        display: none;
+    }
+    .header-bottom-menu .current a {
+        position: relative;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+    }
+    input {
+        max-width: 250px;
+        
+    }
+   
+ 
+ }
